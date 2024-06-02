@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../Frameworks/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../../../Frameworks/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./Font Awesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <img src="./Image Used/Jollibee Logo.webp" alt="Jollibee Logo" class="jollibee-logo">
+            <!-- <nav class="header-nav">
+                <a href="MobileView.html">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="#">About Us</a>
+                <a href="#">Locations</a>
+                <a href="#">Contact Us</a>
+            </nav> -->
+            <div id="ham-menu" class="ham-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+        </header>
+        <aside id="sidebar" class="sidebar">
+            <div class="image-container" id="link">
+                <img id="jollibee-logo" src="./Image Used/Jollibee Logo.webp" alt="Jollibee">
+            </div>
+            <nav>
+                <nav class="header-nav">
+                    <!-- <a href="MobileView.html">Home</a>
+                    <a href="Menu.html">Menu</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Locations</a>
+                    <a href="#">Contact Us</a> -->
+                    <div class="header-nav-item">
+                        <a href="#" class="header-nav-links">
+                            <i class="fas fa-home" id="logo-name"></i>
+                            <span class="links-name">Home</span>
+                        </a>
+                    </div>
+                    <div class="header-nav-item">
+                        <a href="#"
+                        class="header-nav-links">
+                            <i class="fas fa-burger"></i>
+                            <span class="links-name">Menu</span>
+                        </a>
+                    </div>
+                    <div class="header-nav-item">
+                        <a href="#"
+                        class="header-nav-links">
+                            <i class="fas fa-address-card"></i>
+                            <span class="links-name">About Us</span>
+                        </a>
+                    </div>
+                    <div class="header-nav-item">
+                        <a href="#"
+                        class="header-nav-links">
+                            <i class="fas fa-location-dot"></i>
+                            <span class="links-name">Location</span>
+                        </a>
+                    </div>
+                    <div class="header-nav-item">
+                        <a href="#"
+                        class="header-nav-links">
+                            <i class="fas fa-headset"></i>
+                            <span class="links-name">Contact Us</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <hr class="sidebar-hor-line">
+
+                <div class="sidebar-links">
+                    <a href="#" class="link">
+                        <i class="fas fa-rectangle-ad" id="logo-name"></i>
+                        <span class="links-name">Promotions</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-fire" id="logo-name"></i>
+                        <span class="links-name">Popular</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-star" id="logo-name"></i>
+                        <span class="links-name">Favorites</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-hamburger" id="logo-name"></i>
+                        <span class="links-name">Order Online</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-question-circle" id="logo-name"></i>
+                        <span class="links-name">FAQ</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-comment" id="logo-name"></i>
+                        <span class="links-name">Feedback</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-envelope" id="logo-name"></i>
+                        <span class="links-name">Newsletter</span>
+                    </a>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#" id="link">
+                        <i class="fas fa-link" id="logo-name"></i>
+                        <span class="links-name">Social Media</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        <main id="main-content" class="container-fluid">
+            <div class="jollibee-hero-banner">
+                <div class="jollibee-hero-container">
+                    <h1 class="hero">Welcome to Jollibee!</h1>
+                    <p class="hero-para">Bringing joy and deliciousness to every family.</p>
+                    <button class="order-btn" type="button">ORDER NOW &nbsp; <i class="fas fa-arrow-up-right-from-square"></i></button>
+                </div>
+                <div class="jollibee-image-banner">
+                    <img src="./Image Used/Jollibee-Home-Banner.webp" class="banner" alt="Jollibee Banner">
+                </div>
+            </div>
+
+            <section class="section1">
+                <h3 class="section-subhead"> Exclusive Promos </h3>
+                <div class="promos-container">
+                    <div class="promo-items">
+                        <a href="#" id="promo-link">
+                            <img src="./Image Used/jollibeepromo1.jpg" alt="Jollibee Promo" class="image-link">
+                        </a>
+                    </div>
+                    <div class="promo-items">
+                        <a href="#" id="promo-link">
+                            <img src="./Image Used/jollibeepromo2.jpg" alt="Jollibee Promo" class="image-link">
+                        </a>
+                    </div>
+                    <div class="promo-items">
+                        <a href="#" id="promo-link">
+                            <img src="./Image Used/jollibeepromo3.jpg" alt="Jollibee Promo" class="image-link">
+                        </a>
+                    </div>
+                </div>
+                <button id="more-btn" type="Menu">See More</button>
+            </section>
+
+            <section class="section2">
+                <h3 class="section-subhead"> Featured Menus </h3>
+                <div class="menu-container">
+                    <div class="menu-items">
+                        <span class="menu-name">Chicken Joy</span>
+                        <img src="./Image Used/chickenjoy.webp" alt="Featured Menu" class="menu">
+                    </div>
+                    <div class="menu-items">
+                        <span class="menu-name">Spaghetti</span>
+                        <img src="./Image Used/spaghetti.webp" alt="Featured Menu" class="menu">
+                    </div>
+                    <div class="menu-items">
+                        <span class="menu-name">Yumburger</span>
+                        <img src="./Image Used/burger.webp" alt="Featured Menu" class="menu">
+                    </div>
+                </div>
+                <button id="more-btn" type="Menu">See More</button>
+            </section>
+
+            <section class="section3">
+                <div class="cards-container">
+                    <div class="item-cards">
+                        <img src="./Image Used/Jollibee Giftcard.jpg" alt="Jollibee Gift Card" class="image-cards">
+                        <div class="cards-description-container">
+                            <h5 class="card-subheading"> Digital Gift Card</h5>
+                            <p class="card-description">
+                                Give the gift convenience and deliciousness a perfect blend for any occasion!
+                            </p>
+                            <button class="card-button" type="submit"> LEARN MORE </button>
+                        </div>
+                    </div>
+                    <div class="item-cards">
+                        <img src="./Image Used/Jollibee Nutritional Facts.jpg" alt="Jollibee Nutritional Facts" class="image-cards">
+                        <div class="cards-description-container">
+                            <h5 class="card-subheading"> Nutrition Facts </h5>
+                            <p class="card-description">
+                                Find the menu nutrition information you're seeking. Learn more about our food.
+                            </p>
+                            <button class="card-button" type="submit"> DOWNLOAD PDF 
+                                <i class="fas fa-download" id="card-item-logo"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section4">
+                <div class="merch-container">
+                    <div class="merch-description">
+                        <h4 class="merch-text1">JOLLY MERCH SHOP</h4>
+                        <h2 class="merch-text2">Bundle & Save!</h2>
+                        <p class="merch-text3">Get your favorite merch for less</p>
+                        <button class="buy-merch" type="submit">SHOP NOW &nbsp; <i class="fas fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                    <div class="merch-clothes">
+                        <a href="#" class="buy">
+                            <img src="./Image Used/Jollibee Merch Tshirts.png" id="clothes">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section5">
+                <h2 class="newstore-text1"> New Store Openings</h2>
+                <p class="newstore-text2">View All
+                    <a href="#" class="store-locations">
+                        <span class="style-text">Future Jollibee Locations</span>
+                    </a>
+                </p>
+                <div class="new-store-container">
+                    <div class="new-store-image-container">
+                        <img src="./Image Used/Jollibee Brooklyn.png" alt="Jollibee Brooklyn" class="new-store-image">
+                        <p class="new-store-location">Jollibee Brooklyn</p>
+                        <button class="new-store-details" type="submit">STORE DETAILS  &nbsp;<i class="fas fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                    <div class="new-store-image-container">
+                        <img src="./Image Used/Jollibee Sterling Heights.png" alt="Jollibee Sterling Heights" class="new-store-image">
+                        <p class="new-store-location">Jollibee Sterling Heights</p>
+                        <button class="new-store-details" type="submit">STORE DETAILS &nbsp;<i class="fas fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                    <div class="new-store-image-container">
+                        <img src="./Image Used/Jollibee Dallas.png" alt="Jollibee Dallas" class="new-store-image">
+                        <p class="new-store-location">Jollibee Dallas</p>
+                        <button class="new-store-details" type="submit">STORE DETAILS  &nbsp;<i class="fas fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="text-container">
+                        <h2 class="subscribe-text1">Subscribe to our emails</h2>
+                        <p class="subscribe-text2">Be the first to know about new collections and exclusive offers.</p>
+                        <div class="email-input-container">
+                            <input type="email" id="email" name="email" placeholder="jacob@gmail.com">
+                            <button class="subscribe-button" type="submit">SUBSCRIBE</button>
+                            <p class="email-input-container-text">By selecting "Subscribe", you agree to the Jollibee <span class="footer-style-text">Privacy Policy</span> and <span class="footer-style-text">Terms of Service. </span>Unsubscribe from emails at any time. Please note when unsubscribing: it may take up to 10 business days for your request to take effect.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="section-footer">
+                    <div class="footer-links-container">
+                        <div class="footer-links-division">
+                            <h3 class="footer-subheading">Follow us</h3>
+                            <div class="icons-container">
+                                <div class="icons-item">
+                                    <a href="#" class="icons">
+                                        <i class="fab fa-facebook-square fa-2x" id="icon"></i>
+                                        <span class="link">https://web.facebook.com/JollibeePhilippines</span>
+                                    </a>
+                                </div>
+                                <div class="icons-item">
+                                    <a href="#" class="icons">
+                                        <i class="fab fa-instagram-square fa-2x" id="icon"></i>
+                                        <span class="links">
+                                            https://www.instagram.com/jollibee
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="icons-item">
+                                    <a href="#" class="icons">
+                                        <i class="fab fa-tiktok fa-2x" id="icon"></i>
+                                        <span class="links">https://www.tiktok.com/@jollibee
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-links-division">
+                            <h3 class="footer-subheading">Helpful Links</h3>
+                            <a href="#" class="footer-links">Contact Us</a>
+                            <a href="#" class="footer-links">Menu</a>
+                            <a href="#" class="footer-links">Philippines Locations</a>
+                            <a href="#" class="footer-links">Future Jollibee Locations</a>
+                            <a href="#" class="footer-links">Reheating Instructions</a>
+                            <a href="#" class="footer-links">Nutrition & Allergen</a>
+                            <a href="#" class="footer-links">Popular Links</a>
+                            <a href="#" class="footer-links">FAQ</a>
+                        </div>
+                        <div class="footer-links-division">
+                            <h3 class="footer-subheading">Popular Searches</h3>
+                            <a href="#" class="footer-links">Jollibee 25th Anniversary</a>
+                            <a href="#" class="footer-links">Jollibee Delivery</a>
+                            <a href="#" class="footer-links">Jollibee App</a>
+                            <a href="#" class="footer-links">Jollibee Near Me</a>
+                            <a href="#" class="footer-links">Jollibee Menu</a>
+                            <a href="#" class="footer-links">Jollibee Jobs</a>
+                            <a href="#" class="footer-links">Jollibee Coupons</a>
+                            <a href="#" class="footer-links">Jollibee Catering</a>
+                            <a href="#" class="footer-links">Jollibee Store House</a>
+                            <a href="#" class="footer-links">Jollibee Promotions</a>
+                            <a href="#" class="footer-links">Jollibee Merch Shop</a>
+                        </div>
+                        <div class="footer-links-division">
+                            <h3 class="footer-subheading">Popular Searches</h3>
+                            <a href="#" class="footer-links">Chickenjoy Meals Deals</a>
+                            <a href="#" class="footer-links">Family Bucket Meals</a>
+                            <a href="#" class="footer-links">Fried Chicken</a>
+                            <a href="#" class="footer-links">Spicy Chicken</a>
+                            <a href="#" class="footer-links">Spaghetti and Palabok Fiesta</a>
+                            <a href="#" class="footer-links">Fried Chicken Sandwiches</a>
+                            <a href="#" class="footer-links">Chicken Tenders</a>
+                            <a href="#" class="footer-links">Burgers</a>
+                            <a href="#" class="footer-links">Burger Steaks</a>
+                            <a href="#" class="footer-links">Sides, Drinks, and Desserts</a>
+                            <button class="footer-orderbtn">START ORDER</button>
+                        </div>
+                    </div>
+                    <hr class="horizontal-line">
+                    <div class="copyrights-container">
+                        <span class="copyrights-text">&copy; 2024 Jollibee <span class="copyright-style1"> Accessibility <span class="copyright-style2">|</span> CCPA <span class="copyright-style2"> | </span> Privacy Policy <span class="copyright-style2"> | </span> Terms of Service </span>
+                    </div>
+                </section>
+            </footer>
+        </main>
+    </div>
+</body>
+<script src="Interactivity.js"></script>
+</html>

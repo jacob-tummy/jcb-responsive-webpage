@@ -1,0 +1,789 @@
+$bg-color1:  #d6001c;
+$bg-color2:  rgb(255, 164, 0);
+$d6001c: #d6001c;
+$FFA400: #FFA400;
+$white: white;
+$black: black;
+$font: 'Poppins';
+
+body {
+    margin: 0;
+    font-family: $font;
+    padding-top: 60px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main-content'
+    'footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    /* gap: 10px; */
+    height: 100vh;
+
+    .header {
+        grid-area: header;
+        display: flex;
+        /* flex-wrap: wrap; */
+        // align-items: center;
+        justify-content: space-around;
+        background-color: $bg-color1;
+        padding: 8px;
+        border-bottom:2px solid $bg-color2;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        
+        .jollibee-logo {
+            height: 7vh;
+            // margin-top: 10px;
+            margin: 0 auto;
+        }
+    
+        // .header-nav {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     gap: 10px;
+    
+        //     a {
+        //         color: $white;
+        //         font-size: 0.5em;
+        //         text-decoration: none;
+        //     }
+        // }
+    }
+    
+    .ham-menu {
+        height: 20px;
+        width:20px;
+        position: relative;
+        right: 20px;
+        top: 2px;
+        padding: 5px;
+        margin-bottom: 1.4rem;
+    
+        span {
+            margin-top: 0.63rem;
+            height: 4px;
+            width: 25px;
+            background-color: $white;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease;
+            -webkit-transition: .3s ease;
+            -moz-transition: .3s ease;
+            -ms-transition: .3s ease;
+            -o-transition: .3s ease;
+    
+            &:nth-child(1) {
+                top: 25%;
+            }
+    
+            &:nth-child(3) {
+                top: 75%;
+            }
+        }
+    
+        &.active {
+            span {
+                &:nth-child(3) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+    
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+    
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+    
+    .sidebar {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: -400px;
+        width: 150px;
+        height: 100%;
+        background-color: $white;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        transition: left 0.3s;
+        -webkit-transition: left 0.3s;
+        -moz-transition: left 0.3s;
+        -ms-transition: left 0.3s;
+        -o-transition: left 0.3s;
+        z-index: 1002;
+        overflow-y: scroll;
+    
+        .image-container {
+            background-color: $bg-color1;
+            padding: 19.5px;
+            text-align: center;
+    
+            #jollibee-logo {
+                height: 4.0vh;
+            }
+        }
+    
+        nav {
+            display: flex;
+            flex-direction: column;
+    
+            .header-nav {
+                padding: 0rem 0rem 0.1rem 0rem;
+                transition: 0.1s ease-in-out;
+                -webkit-transition: 0.1s ease-in-out;
+                -moz-transition: 0.1s ease-in-out;
+                -ms-transition: 0.1s ease-in-out;
+                -o-transition: 0.1s ease-in-out; 
+    
+                .header-nav-item {
+                    padding: 0.7rem 0rem 0.7rem 1.5rem;
+    
+                    .header-nav-links {
+                        color: $black;
+                        text-decoration: none;
+                        font-size: 0.8em;
+        
+                        .links-name {
+                            margin-left: 5px;
+                        }
+                    }
+    
+                    &:hover {
+                        background-color: $bg-color2;
+                        color: $white;
+                    }
+                }
+    
+            }
+    
+            .sidebar-hor-line {
+                border: 2px solid black;
+                width: 80%;
+            }
+    
+            .sidebar-links {
+                padding: 0.7rem 0rem 0.7rem 1.5rem;
+                transition: 0.1s ease-in-out;
+                -webkit-transition: 0.1s ease-in-out;
+                -moz-transition: 0.1s ease-in-out;
+                -ms-transition: 0.1s ease-in-out;
+                -o-transition: 0.1s ease-in-out; 
+    
+                a {
+                    color: $black;
+                    text-decoration: none;
+                    font-size: 0.8em;
+                }
+            }
+    
+            .sidebar-links:hover {
+                background-color: $bg-color2;
+                color: $white;
+            }
+        }
+    }
+    
+    main.container-fluid {
+        padding: 0;
+    }
+    
+    #main-content {
+        grid-area: main-content;
+        background-color: $white;
+    
+        .jollibee-hero-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .jollibee-hero-container {
+                padding: 5px 0px 10px 15px;
+                color: black;
+    
+                .hero {
+                    font-weight: bold;
+                    margin: 20px 0px 0px 0px;
+                    font-size: 1.3em;
+                    
+                }
+                .hero-para {
+                    font-size: 0.6em;
+                    margin: 0px;
+                }
+    
+                .order-btn {
+                    background-color: $bg-color1;
+                    outline: none;
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    -webkit-border-radius: 20px;
+                    -moz-border-radius: 20px;
+                    -ms-border-radius: 20px;
+                    -o-border-radius: 20px;
+                    color: $white;
+                    margin-top: 5px;
+                    font-weight: bolder;
+                    border: none;
+                    font-family: 'Poppins';
+                    font-size: 0.5em;
+                }
+            }
+    
+            .jollibee-image-banner {
+                padding: 5px 10px 5px 0px;
+                .banner {
+                    width: 50vw;
+                    margin-top: 20px;
+                }
+            } 
+        }
+    
+        .section1 {
+            padding: 10px 10px;
+            margin: 20px 20px;
+            text-align: center;
+    
+            .section-subhead {
+                background-color: $bg-color2;
+                width: 180px;
+                height: auto;
+                padding: 15px 20px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                color: $white;
+                margin-bottom: 20px;
+            }
+    
+            .promos-container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 25px 20px;
+    
+                #promo-link {
+                    .image-link {
+                        width: 60vw;
+                    }
+                }
+            }
+    
+            #more-btn {
+                background-color: $bg-color1;
+                width: 230px;
+                height: auto;
+                padding: 15px 20px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                color: $white;
+                margin-bottom: 20px;
+                outline: none;
+                border: none;
+                font-weight: bold;
+                font-family: 'Poppins';
+                border-bottom: 5px solid $bg-color2;
+                font-size: 1.4em;
+    
+                &:hover {
+                    background-color: rgb(255, 164, 0);
+                }
+            }
+        }
+    
+        .section2 {
+            background-color: $bg-color1;
+            padding: 40px 0px;
+            margin: 20px 0px;
+            // padding: 30px 0px;
+            text-align: center;
+    
+            .section-subhead {
+                background-color: $bg-color2;
+                width: 200px;
+                height: auto;
+                padding: 15px 20px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                color: $white;
+                margin-bottom: 20px;
+            }
+    
+            .menu-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 60px;
+                margin-bottom: 40px;
+                padding: 25px 20px;
+                // margin: 25px;
+                // padding: 30px;
+                // display: flex;
+                // justify-content: space-evenly;
+                // flex-wrap: wrap;
+    
+                .menu-items {
+                    width: 14rem;
+                    height: 14rem;
+                    color: $white;
+                    //background-color: white;
+                    //border-radius: 15px;
+                    //-webkit-border-radius: 15px;
+                    //-moz-border-radius: 15px;
+                    //-ms-border-radius: 15px;
+                    //-o-border-radius: 15px;
+                    -webkit-box-shadow: 15px 7px 28px -4px rgba(0,0,0,0.46);
+                    -moz-box-shadow: 15px 7px 28px -4px rgba(0,0,0,0.46);
+                    box-shadow: 15px 7px 28px -4px rgba(0,0,0,0.46);
+                    border-radius: 15px;
+    
+                    .menu-name {
+                        font-weight: bolder;
+                        font-size: 1.5em;
+                        padding: 20px 10px;
+                    }
+    
+                    .menu {
+                        margin-top: 10px;
+                        width: 50vw;
+                    }
+                }
+            }
+    
+            #more-btn {
+                background-color: $white;
+                width: 230px;
+                height: auto;
+                padding: 15px 20px;
+                text-align: center;
+                margin: 0 auto;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                color: $black;
+                margin-bottom: 20px;
+                outline: none;
+                border: none;
+                font-weight: bold;
+                font-family: 'Poppins';
+                border-bottom: 5px solid $bg-color2;
+                font-size: 1.4em;
+    
+                &:hover {
+                    background-color: rgb(255, 164, 0);
+                    color: $white;
+                }
+            }
+        }
+    
+        .section3 {
+            padding: 10px 10px;
+            margin: 20px 20px;
+    
+            .cards-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 50px;
+    
+                .item-cards {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+    
+                    .cards-description-container {
+                        width: 70vw;
+                        height: 46vh;
+                        background-color: rgb(201, 223, 223);
+                        text-align: center;
+                        padding: 8px;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+    
+                    .image-cards {
+                        width: 75vw;
+                    }
+    
+                    .cards-description-container {
+                        
+                        .card-subheading {
+                            font-weight: bold;
+                        }
+    
+                        .card-description {
+                            padding: 10px;
+                        }
+    
+                        .card-button {
+                            outline: none;
+                            border: none;
+                            background-color:#d6001c;
+                            padding: 10px 30px;
+                            border-radius: 20px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            -ms-border-radius: 20px;
+                            -o-border-radius: 20px;
+                            color: white;
+                            // font-family: 'Poppins';
+                            font-weight: bolder;
+    
+                            #card-item-logo {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .section4 {
+            padding: 40px 0px;
+            margin: 20px 0px;
+            background-color: $bg-color1;
+    
+            .merch-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+    
+                .merch-description {
+                    .merch-text1 {
+                        color: $white;
+                        margin: 0px;
+                        font-size: 0.6em;
+                    }
+    
+                    .merch-text2 {
+                        color: $white;
+                        font-weight: bold;
+                        margin: 0px;
+                        font-size: 1em;
+                    }
+    
+                    .merch-text3 {
+                        color: $white;
+                        margin: 0px;
+                        font-size: 0.8em;
+                    }
+    
+                    .buy-merch {
+                        background-color: $bg-color2;
+                        outline: none;
+                        padding: 10px 15px;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        color: $black;
+                        margin-top: 5px;
+                        font-weight: bolder;
+                        border: none;
+                        font-family: 'Poppins';
+                        font-size: 0.5em;
+                    }
+                }
+    
+                .merch-clothes {
+                    .buy {
+                        #clothes {
+                            width: 40vw;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .section5 {
+            padding: 10px 10px;
+            margin: 20px 20px;
+            text-align: center;
+    
+            .newstore-text1 {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin: 0px;
+            }
+    
+            .newstore-text2 {
+                font-size: 0.6em;
+                margin: 0px;
+    
+                .style-text {
+                    color: $d6001c;
+                }
+            }
+    
+            .store-locations {
+                text-decoration: none;
+            }
+    
+            .new-store-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+                padding-top: 20px;
+    
+                .new-store-image-container {
+                    .new-store-image {
+                        width: 70vw
+                    }
+    
+                    .new-store-location {
+                        font-weight: bold;
+                    }
+    
+                    .new-store-details {
+                        outline: none;
+                        border: none;
+                        padding: 10px 30px;
+                        background-color:#d6001c;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        color: white;
+                        font-family: 'Poppins';
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    
+        .footer {
+            grid-area: footer;
+    
+            .footer-container {
+                background-color: $bg-color1;
+                padding: 10px;
+            }
+    
+            .text-container {
+                text-align: center;
+                padding: 20px 15px;
+                margin: 0 auto;
+    
+                .subscribe-text1 {
+                    font-weight: Bold;
+                    color: $white;
+                    font-size: 1.2em;
+                    margin: 0px;
+                }
+    
+                .subscribe-text2 {
+                    color: $white;
+                    font-size: 0.5em;
+                    margin: 0px;
+                }
+    
+                .email-input-container {
+                    #email {
+                        padding: 10px;
+                        width: 100%;
+                        outline: none;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                        border: none;
+                        box-sizing: border-box;
+                        margin-top: 10px;
+                    }
+    
+                    .subscribe-button {
+                        display: block;
+                        margin: 0 auto;
+                        width: 100%;
+                        margin-top: 10px;
+                        padding: 6px;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        border: none;
+                        font-family: 'Poppins';
+                        font-weight: bold;
+                        background-color: $bg-color2;
+                    }
+    
+                    .email-input-container-text {
+                        // padding: 10px 0px;
+                        padding: 0px 5px;
+                        text-align: justify;
+                        font-size: 0.5em;
+                        color: white;
+                    }
+                }
+            }
+    
+            .section-footer {
+                padding: 10px 0px;
+                margin: 20px 20px;
+    
+                .footer-links-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 40px 0px;
+                    gap: 30px;
+    
+                    .footer-links-division {
+    
+                        .icons-container {
+                            .icons-item {
+                                .icons {
+                                    font-size: 0.6em;
+                                    color: $d6001c;
+                                    text-decoration: none;
+        
+                                    #icon {
+                                        margin-right: 5px;
+                                    } 
+    
+                                    &:hover {
+                                        text-decoration: 2px solid $FFA400 underline;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .footer-subheading {
+                            font-weight: bold;
+                        }
+    
+                        .footer-links {
+                            display: block;
+                            text-decoration: none;
+                            color: $black;
+                            padding: 5px 0px;
+                            font-size: 0.7em;
+    
+                            &:hover {
+                                text-decoration: 2px solid underline $d6001c;
+                            }
+                        }
+    
+                        .footer-orderbtn {
+                            outline: none;
+                            border: none;
+                            background-color:#d6001c;
+                            padding: 10px 30px;
+                            border-radius: 20px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            -ms-border-radius: 20px;
+                            -o-border-radius: 20px;
+                            color: white;
+                            font-family: $font;
+                            font-weight: bolder;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+    
+                .copyrights-container {
+                    text-align: center;
+                    .copyrights-text {
+                        font-size: 0.4em;
+        
+                    }
+    
+                    .copyright-style1 {
+                        color: $d6001c;
+                    }
+    
+                    .copyright-style2 {
+                        color: $black
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 375px) and (min-device-height: 812px) and (max-device-height: 812px) {
+    .main-container {
+        .header {
+            padding: 10px;
+
+            .jollibee-logo {
+                margin-top: 5px;
+            }
+        }
+
+        .ham-menu {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+// @media only screen 
+// and (min-device-width: 375px)
+// and (min-device-width: 375px)
+// and (min-device-height: 812px)
+// and (max-device-height: 812px)
+// and (-webkit-device-pixel-ratio: 3) {
+//     body {
+//         overflow-x: hidden;
+//     }
+// }
+
+
+// @media only screen 
+// and (min-device-width: 375px)
+// and (min-device-width: 375px)
+// and (min-device-height: 812px)
+// and (max-device-height: 812px)
+// and (-webkit-device-pixel-ratio: 3) {
+//     body {
+//         overflow-x: hidden;
+//     }
+// }
+
